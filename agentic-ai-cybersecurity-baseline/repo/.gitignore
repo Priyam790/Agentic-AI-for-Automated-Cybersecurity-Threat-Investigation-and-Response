@@ -1,0 +1,10 @@
+# raw/processed data and models are large - do not commit
+data/raw/*
+data/processed/*
+data/synthetic/*
+*.joblib
+*.npz
+__pycache__/
+.ipynb_checkpoints/
+.env
+!data/raw/.gitkeep
