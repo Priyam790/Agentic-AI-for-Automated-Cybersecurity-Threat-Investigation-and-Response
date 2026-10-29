@@ -1,0 +1,12 @@
+(Copy the values from `results/metrics.md` after running the steps below.)
+
+## How to Run
+```bash
+pip install -r requirements.txt
+# 1. Download CICIDS2017 CSVs into data/raw/ (see data/README.md)
+python src/preprocess.py --max-rows 300000   # remove --max-rows if you have enough RAM
+python src/train_baseline.py
+python src/make_form_text.py                 # prints a results summary paragraph
+```
+Outputs go to `data/processed/` and `results/` (metrics.md, metrics.json,
+confusion-matrix images).
